@@ -40,7 +40,7 @@ export const MainLayout = () => {
                 {(countryData && stateCovidList && dataTime) && <>
                     <MainStatsContainer>
                         <MainCard countryData={countryData} timeOfData={dataTime} />
-                        <StateList stateDataList={stateCovidList} />
+                        <StateList stateDataList={stateCovidList.sort((a, b) => b.total.active - a.total.active)} />
                     </MainStatsContainer>
                     <MapContentWrapper> <Map stateDataList={stateCovidList} /> </MapContentWrapper>
                 </>}

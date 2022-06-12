@@ -34,7 +34,7 @@ const getSortedText = (sortOption: SortOptions): string => {
 
 export const StateList = (props: StateListProps) => {
     const [stateList, setStateList] = useState<CovidData[]>(props.stateDataList);
-    const [activeSorting, setActiveSorting] = useState<SortOptions>(SortOptions.A2Z);
+    const [activeSorting, setActiveSorting] = useState<SortOptions>(SortOptions.Active);
     const [showDropDown, setShowDropDown] = useState<boolean>(false);
     const [opacity, setOpacity] = useState<number>(0.5);
 
