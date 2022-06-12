@@ -26,13 +26,13 @@ export const HoverStateData = (props: { data: CovidData }) => {
     const { data } = props;
     const newData = data.new;
 
-    const changeStringActive = newData.active === 0 ? '' : newData.active > 0 ? `+${newData.active.toLocaleString('en-US')}` : `-${newData.active.toLocaleString('en-US')}`;
+    const changeStringActive = newData.active === 0 ? '' : newData.active > 0 ? `( +${newData.active.toLocaleString('en-US')} )` : `( -${newData.active.toLocaleString('en-US')} )`;
 
-    const changeStringPositive = newData.positive === 0 ? '' : newData.positive > 0 ? `+${newData.positive.toLocaleString('en-US')}` : `-${newData.positive.toLocaleString('en-US')}`;
+    const changeStringPositive = newData.positive === 0 ? '' : newData.positive > 0 ? `( +${newData.positive.toLocaleString('en-US')} )` : `( -${newData.positive.toLocaleString('en-US')} )`;
 
-    const changeStringDeath = newData.death === 0 ? '' : newData.death > 0 ? `+${newData.death.toLocaleString('en-US')}` : `-${newData.death.toLocaleString('en-US')}`;
+    const changeStringDeath = newData.death === 0 ? '' : newData.death > 0 ? `( +${newData.death.toLocaleString('en-US')} )` : `( -${newData.death.toLocaleString('en-US')} )`;
 
-    const changeStringCured = newData.cured === 0 ? '' : newData.cured > 0 ? `+${newData.cured.toLocaleString('en-US')}` : `-${newData.cured.toLocaleString('en-US')}`;
+    const changeStringCured = newData.cured === 0 ? '' : newData.cured > 0 ? `( +${newData.cured.toLocaleString('en-US')} )` : `( -${newData.cured.toLocaleString('en-US')} )`;
 
 
     return (
