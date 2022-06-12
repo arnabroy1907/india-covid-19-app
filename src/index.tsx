@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ReportHandler } from 'web-vitals';
+import { App } from './app';
+import './index.css';
 
 // for web vitals
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
@@ -18,10 +20,6 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
-root.render(
-    <React.StrictMode>
-        <h1>Hello</h1>
-    </React.StrictMode>
-);
+root.render(<App />);
 
 reportWebVitals();
